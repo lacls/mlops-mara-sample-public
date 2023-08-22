@@ -53,7 +53,7 @@ class ModelPredictor:
 
     def predict(self, data: Data):
         start_time = time.time()
-
+        print("start predict")
         # preprocess
         raw_df = pd.DataFrame(data.rows, columns=data.columns)
         feature_df = RawDataProcessor.apply_category_features(
